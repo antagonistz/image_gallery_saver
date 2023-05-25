@@ -64,7 +64,7 @@ class ImageGallerySaverPlugin : FlutterPlugin, MethodCallHandler {
                     values.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_MOVIES)
                 } else if(mimeType!!.startsWith("audio")) {
                     uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-                    values.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOCUMENTS)
+                    values.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_MUSIC)
                 }
             }
             return applicationContext?.contentResolver?.insert(uri, values)!!
